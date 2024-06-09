@@ -12,7 +12,12 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.0",
     "@types/node": "^20.14.2",
+    "@types/uuid": "^9.0.8",
     "tsx": "^4.13.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0",
+    "uuidv4": "^6.2.13"
   }
 }
