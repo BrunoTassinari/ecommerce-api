@@ -1,11 +1,13 @@
 import { BaseModel } from './BaseModel';
+import { OrderStatus } from './OrderStatus';
 import type { SaleItem } from './SaleItem';
 import type { User } from './User';
 
-export class ShoppingcCart extends BaseModel {
-	public readonly user: User;
-	public readonly items: Array<SaleItem>;
-	public readonly total: number;
+export class Order extends BaseModel {
+	public user: User;
+	public items: Array<SaleItem>;
+	public status: OrderStatus;
+	public total: number;
 
 	constructor(user: User, items: Array<SaleItem>) {
 		super();
@@ -14,6 +16,7 @@ export class ShoppingcCart extends BaseModel {
 
 		this.user = user;
 		this.items = items;
+		this.status = OrderStatus.PENDING;
 		this.total = this.calculateTotal();
 	}
 

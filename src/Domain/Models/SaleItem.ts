@@ -1,7 +1,7 @@
 import { BaseModel } from './BaseModel';
 import type { Product } from './Product';
 
-export class ShoppingcCartItem extends BaseModel {
+export class SaleItem extends BaseModel {
 	public readonly product: Product;
 	public readonly quantity: number;
 	public readonly total: number;
