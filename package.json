@@ -4,20 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts"
+    "dev": "tsx watch --env-file .env src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.0",
+    "@types/express": "^5.0.0",
     "@types/node": "^20.14.2",
     "@types/uuid": "^9.0.8",
     "tsx": "^4.13.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "express": "^4.21.0",
     "uuid": "^10.0.0",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "zod": "^3.23.8"
   }
 }
