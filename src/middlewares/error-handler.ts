@@ -1,5 +1,6 @@
 import { BaseException } from '../exceptions/base-exception';
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export const errorHandler = (error: Error, req: any, res: any, next: any) => {
 	if (error instanceof BaseException) {
 		console.error(
