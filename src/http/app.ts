@@ -1,16 +1,15 @@
 import express from 'express';
-import { UnauthorizedException } from '../exceptions/unauthorized-exception';
-import { notFoundHandler } from '../middlewares/not-found-handler';
+import type { Request, Response, NextFunction } from 'express';
 import { errorHandler } from '../middlewares/error-handler';
 import { logHandler } from '../middlewares/log-handler';
+import { notFoundRoute } from './routes/not-found';
 
 const app = express();
 
 app.use(express.json());
 app.use(logHandler);
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-app.get('/', (req: any, res: any, next: any) => {
+app.get('/', (req: Request, res: Response, next: NextFunction) => {
 	try {
 		//throw new UnauthorizedException('You are not authorized');
 		res.send('Hello');
@@ -19,7 +18,7 @@ app.get('/', (req: any, res: any, next: any) => {
 	}
 });
 
-app.all('*', notFoundHandler);
+app.use(notFoundRoute);
 app.use(errorHandler);
 
 export { app };
