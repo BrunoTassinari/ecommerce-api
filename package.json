@@ -11,7 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.0",
+    "@types/cookie-parser": "^1.4.7",
     "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^20.14.2",
     "@types/uuid": "^9.0.8",
     "tsx": "^4.13.2",
@@ -19,7 +21,9 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
     "uuid": "^10.0.0",
     "uuidv4": "^6.2.13",
     "zod": "^3.23.8"
